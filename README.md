@@ -9,7 +9,7 @@ sudo apt-get install evince
 ### to run the codes simply use the following format to create an executable 
 
 ```
-g++ [the name of the executable] -o [your_desired_output_file_name] 
+g++ [the_name_of_the_cpp_executable] -o [your_desired_output_file_name] 
 ./[output_file_name]
 evince plot.eps 
 ```
