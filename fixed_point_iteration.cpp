@@ -63,6 +63,7 @@ void fixed_point_iteration()
 int main()
 {
     gnuplot p; 
+    
     fixed_point_iteration();
     p("set term postscript eps"); // gnuplot command for eps file format
     p("set output \"plot.eps\" "); // setting name of output file  
