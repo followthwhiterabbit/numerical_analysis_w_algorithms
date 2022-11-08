@@ -7,10 +7,10 @@
 
 inline float func(float x)
 {
-    return (x*x); 
-}       
+    return (x*x*x - 9*x + 1 ); 
+}              
 
-void sit()
+void internal_search()
 {
     std::ofstream plot_file; 
     plot_file.open("plot.dat"); 
@@ -21,8 +21,8 @@ void sit()
     std::cin >> option;
     if(option == 'y')
         {
-            xi = 1; 
-            xf = 4; 
+            xi = 0; 
+            xf = 10; 
             dx = 1; 
         }
     else
@@ -40,6 +40,8 @@ void sit()
             x = x + dx; 
         }
 
+        plot_file.close(); 
+
 }
 
 
@@ -47,10 +49,11 @@ int main()
 {
 
     gnuplot p; // object of class gnuplot  
-    sit(); 
-    p("set term postscript eps"); // gnuplot terminal command to have output file in .eps format 
+    internal_search(); 
+    p("set term postscript eps"); // gnuplot command for eps file format
     p("set output \"plot.eps\" "); // setting name of output file  
     p("plot \'./plot.dat\' u 1:2 w l"); // plot command    
+    
 
 
 }
