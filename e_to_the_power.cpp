@@ -54,7 +54,8 @@ double e_to_the_power_of_x_approximation(double x, int k)
 int main()
 {
     double val; 
-    double result; 
+    double result;
+    double percentage_error;  
     int iter = 2;  
     int count = 0; 
 
@@ -70,8 +71,10 @@ int main()
         
     } while ((exp(val) - result) > eps);
     
+    percentage_error = fabs(exp(val) - result)/(exp(val)) * 100; 
 
-    std::cout << result << " " << "in " << count << " number of iterations"; 
+    std::cout << result << " " << "in " << count << " number of iterations" << std::endl; 
+    std::cout << "the percentage of error is: " << percentage_error << "%" << std::endl; 
 
     
 
