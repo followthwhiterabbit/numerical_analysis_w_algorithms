@@ -1,6 +1,26 @@
 /*
 we will keep halving the interval until we achieve a certain accuracy 
 
+1 - input the initial interval [a, b] of the possible root 
+2 - if f(a) * f(b) // we have a root    
+        count = 0; 
+        do 
+            c = (a + b) / 2; 
+            if f(a) * f(c) < 0
+                b = c
+            else 
+                a = c
+            endif 
+        count++
+        while(count <= 20 and f(c) > eps)
+        show the root , c 
+        show the count, f(c)
+    else
+        prompt "initial interval incorrect"
+
+    return 
+    
+
 
 */
 
